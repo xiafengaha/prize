@@ -121,7 +121,7 @@
             M.isStop = true;
         }
         //开始运动
-        M.open = function () {
+        M.open = function (data) {
             randomFun(data);
             M.isStop = false;
         }
