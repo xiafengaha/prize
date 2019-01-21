@@ -74,7 +74,7 @@
             id: 10,
             image: "img/吴思妤.jpg",
             thumb_image :"img/吴思妤.jpg",
-            name: '吴思妤'
+            name: '吴迪鹿'
         },
         {
             id: 11,
