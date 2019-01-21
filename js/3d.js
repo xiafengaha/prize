@@ -105,11 +105,9 @@
 
         //让中间的头像随机切换背景图
         var randomFun = function (data) {
-
             M.timer = setInterval(function () {
                 //如果内定号码不存在，则为随机号码
                 var randomNum = Math.floor(Math.random() * data.length); //（随机数）
-
                 $('.js_current_dom').css({
                    'background-image': 'url(' + data[randomNum].image + ')'
                 })
