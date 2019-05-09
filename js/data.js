@@ -10,164 +10,184 @@
 //         }
 //     )
 // }
-    personArray = [
-        {
-            id: 0,
-            image: "img/夏锋.jpeg",
-            thumb_image :"img/夏锋.jpeg",
-            name: '夏锋'
-        },
-        {
-            id: 1,
-            image: "img/李丕长.jpeg",
-            thumb_image :"img/李丕长.jpeg",
-            name: '李丕长'
-        },
-        {
-            id: 2,
-            image: "img/徐世豪.jpeg",
-            thumb_image :"img/徐世豪.jpeg",
-            name: '徐世豪'
-        },
-        {
-            id: 3,
-            image: "img/谭健.jpeg",
-            thumb_image :"img/谭健.jpeg",
-            name: '谭健'
-        },
-        {
-            id: 4,
-            image: "img/潘蓉.jpeg",
-            thumb_image :"img/潘蓉.jpeg",
-            name: '潘蓉'
-        },{
-            id: 5,
-            image: "img/魏作超.jpeg",
-            thumb_image :"img/魏作超.jpeg",
-            name: '魏作超'
-        },
-        {
-            id: 6,
-            image: "img/付宇.jpeg",
-            thumb_image :"img/付宇.jpeg",
-            name: '付宇'
-        },
-        {
-            id: 7,
-            image: "img/刘春桃.jpg",
-            thumb_image :"img/刘春桃.jpg",
-            name: '刘春桃'
-        },
-        {
-            id: 8,
-            image: "img/刘滨.jpg",
-            thumb_image :"img/刘滨.jpg",
-            name: '刘滨'
-        },
-        {
-            id: 9,
-            image: "img/卢晨瑶.jpg",
-            thumb_image :"img/卢晨瑶.jpg",
-            name: '卢晨瑶'
-        },
-        {
-            id: 10,
-            image: "img/吴思妤.jpg",
-            thumb_image :"img/吴思妤.jpg",
-            name: '吴迪鹿'
-        },
-        {
-            id: 11,
-            image: "img/吴秋秋.jpg",
-            thumb_image :"img/吴秋秋.jpg",
-            name: '吴秋秋'
-        },
-        {
-            id: 12,
-            image: "img/周芝亦.jpg",
-            thumb_image :"img/周芝亦.jpg",
-            name: '周芝亦'
-        },
-        {
-            id: 13,
-            image: "img/土豆.jpg",
-            thumb_image :"img/土豆.jpg",
-            name: '土豆'
-        },
-        {
-            id: 14,
-            image: "img/富菁楠.jpg",
-            thumb_image :"img/富菁楠.jpg",
-            name: '富菁楠'
-        },
-        {
-            id: 15,
-            image: "img/张晓甜.jpg",
-            thumb_image :"img/张晓甜.jpg",
-            name: '张晓甜'
-        },
-        {
-            id: 16,
-            image: "img/李国玉.jpg",
-            thumb_image :"img/李国玉.jpg",
-            name: '李国玉'
-        },
-        {
-            id: 17,
-            image: "img/李艳杰.jpg",
-            thumb_image :"img/李艳杰.jpg",
-            name: '李艳杰'
-        },
-        {
-            id: 18,
-            image: "img/杨利.jpg",
-            thumb_image :"img/杨利.jpg",
-            name: '杨利'
-        },
-        {
-            id: 19,
-            image: "img/王燕鸣.jpg",
-            thumb_image :"img/王燕鸣.jpg",
-            name: '王燕鸣'
-        },
-        {
-            id: 20,
-            image: "img/盛秋龙.jpg",
-            thumb_image :"img/盛秋龙.jpg",
-            name: '盛秋龙'
-        },
-        {
-            id: 21,
-            image: "img/莫金.jpg",
-            thumb_image :"img/莫金.jpg",
-            name: '莫金'
-        },
-        {
-            id: 22,
-            image: "img/许灵芝.jpg",
-            thumb_image :"img/许灵芝.jpg",
-            name: '许灵芝'
-        },
-        {
-            id: 23,
-            image: "img/郭文慧.jpg",
-            thumb_image :"img/郭文慧.jpg",
-            name: '郭文慧'
-        },
-        {
-            id: 24,
-            image: "img/陈纤纤.jpg",
-            thumb_image :"img/陈纤纤.jpg",
-            name: '陈纤纤'
-        },
-        {
-            id: 25,
-            image: "img/马琼.jpg",
-            thumb_image :"img/马琼.jpg",
-            name: '马琼'
-        }
-
-    ]
+    let localData = localStorage.getItem('userData')
+    let arr = localData.split(',')
+    // console.log(arr, 'arr')
+    for(let i = 0; i < arr.length; i++) {
+        personArray.push({
+            id: i,
+            image: "img/tx" + rand(7) + ".png",
+            thumb_image :"img/tx.png",
+            name: arr[i]
+        })
+    }
+    function rand ( n )
+    {
+        return ( Math.floor ( Math.random ( ) * n + 1 ) );
+    }
+    // personArray = [
+    //     {
+    //
+    //     }
+    // ]
+//     personArray = [
+//         {
+//             id: 0,
+//             image: "img/夏锋.jpeg",
+//             thumb_image :"img/夏锋.jpeg",
+//             name: '夏锋'
+//         },
+//         {
+//             id: 1,
+//             image: "img/李丕长.jpeg",
+//             thumb_image :"img/李丕长.jpeg",
+//             name: '李丕长'
+//         },
+//         {
+//             id: 2,
+//             image: "img/徐世豪.jpeg",
+//             thumb_image :"img/徐世豪.jpeg",
+//             name: '徐世豪'
+//         },
+//         {
+//             id: 3,
+//             image: "img/谭健.jpeg",
+//             thumb_image :"img/谭健.jpeg",
+//             name: '谭健'
+//         },
+//         {
+//             id: 4,
+//             image: "img/潘蓉.jpeg",
+//             thumb_image :"img/潘蓉.jpeg",
+//             name: '潘蓉'
+//         },{
+//             id: 5,
+//             image: "img/魏作超.jpeg",
+//             thumb_image :"img/魏作超.jpeg",
+//             name: '魏作超'
+//         },
+//         {
+//             id: 6,
+//             image: "img/付宇.jpeg",
+//             thumb_image :"img/付宇.jpeg",
+//             name: '付宇'
+//         },
+//         {
+//             id: 7,
+//             image: "img/刘春桃.jpg",
+//             thumb_image :"img/刘春桃.jpg",
+//             name: '刘春桃'
+//         },
+//         {
+//             id: 8,
+//             image: "img/刘滨.jpg",
+//             thumb_image :"img/刘滨.jpg",
+//             name: '刘滨'
+//         },
+//         {
+//             id: 9,
+//             image: "img/卢晨瑶.jpg",
+//             thumb_image :"img/卢晨瑶.jpg",
+//             name: '卢晨瑶'
+//         },
+//         {
+//             id: 10,
+//             image: "img/吴思妤.jpg",
+//             thumb_image :"img/吴思妤.jpg",
+//             name: '吴迪鹿'
+//         },
+//         {
+//             id: 11,
+//             image: "img/吴秋秋.jpg",
+//             thumb_image :"img/吴秋秋.jpg",
+//             name: '吴秋秋'
+//         },
+//         {
+//             id: 12,
+//             image: "img/周芝亦.jpg",
+//             thumb_image :"img/周芝亦.jpg",
+//             name: '周芝亦'
+//         },
+//         {
+//             id: 13,
+//             image: "img/土豆.jpg",
+//             thumb_image :"img/土豆.jpg",
+//             name: '土豆'
+//         },
+//         {
+//             id: 14,
+//             image: "img/富菁楠.jpg",
+//             thumb_image :"img/富菁楠.jpg",
+//             name: '富菁楠'
+//         },
+//         {
+//             id: 15,
+//             image: "img/张晓甜.jpg",
+//             thumb_image :"img/张晓甜.jpg",
+//             name: '张晓甜'
+//         },
+//         {
+//             id: 16,
+//             image: "img/李国玉.jpg",
+//             thumb_image :"img/李国玉.jpg",
+//             name: '李国玉'
+//         },
+//         {
+//             id: 17,
+//             image: "img/李艳杰.jpg",
+//             thumb_image :"img/李艳杰.jpg",
+//             name: '李艳杰'
+//         },
+//         {
+//             id: 18,
+//             image: "img/杨利.jpg",
+//             thumb_image :"img/杨利.jpg",
+//             name: '杨利'
+//         },
+//         {
+//             id: 19,
+//             image: "img/王燕鸣.jpg",
+//             thumb_image :"img/王燕鸣.jpg",
+//             name: '王燕鸣'
+//         },
+//         {
+//             id: 20,
+//             image: "img/盛秋龙.jpg",
+//             thumb_image :"img/盛秋龙.jpg",
+//             name: '盛秋龙'
+//         },
+//         {
+//             id: 21,
+//             image: "img/莫金.jpg",
+//             thumb_image :"img/莫金.jpg",
+//             name: '莫金'
+//         },
+//         {
+//             id: 22,
+//             image: "img/许灵芝.jpg",
+//             thumb_image :"img/许灵芝.jpg",
+//             name: '许灵芝'
+//         },
+//         {
+//             id: 23,
+//             image: "img/郭文慧.jpg",
+//             thumb_image :"img/郭文慧.jpg",
+//             name: '郭文慧'
+//         },
+//         {
+//             id: 24,
+//             image: "img/陈纤纤.jpg",
+//             thumb_image :"img/陈纤纤.jpg",
+//             name: '陈纤纤'
+//         },
+//         {
+//             id: 25,
+//             image: "img/马琼.jpg",
+//             thumb_image :"img/马琼.jpg",
+//             name: '马琼'
+//         }
+//
+//     ]
     // personArray = [
     //     {
     //         id: 0,

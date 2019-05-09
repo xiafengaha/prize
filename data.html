@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./data.css">
+    <title>数据导入</title>
+</head>
+<body>
+    <div>
+        <div id="box">
+            <p>数据导入格式: 张三,李四,... （名字中间用英文逗号隔空）</p>
+            <textarea name="" id="textarea" style="width: 100%; height: 200px"></textarea>
+            <input type="text" placeholder="请输入奖项" class="input-class"/>
+        </div>
+
+        <button id="add">新增奖项</button>
+        <button id="but">确认导入</button>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var textDom = document.getElementById('textarea')
+        var but = document.getElementById('but')
+        var textData = textDom.value
+        but.onclick = butClick()
+        function butClick () {
+            $("#textarea").val()
+            let text = $("#textarea").val()
+            let ipt = document.getElementsByClassName('input-class')
+            console.log(ipt, 'ipt')
+            let iptData = []
+            for(let i = 0; i < ipt.length; i++) {
+                if (ipt[i].value) {
+                    iptData.push(ipt[i].value)
+                }
+            }
+            // console.log(iptData, 'iptData')
+            // let localData = text.split(',')
+            // console.log($("#textarea").val(), localData)
+            localStorage.setItem("userData",text)
+            localStorage.setItem('gradeData', JSON.stringify(iptData))
+        }
+        $("#but").click(function(){
+            butClick()
+            // $("p").slideToggle();
+        });
+        $("#add").click(function() {
+            let ipt = document.createElement("input")
+            ipt.placeholder = '请输入奖项'
+            ipt.className = 'input-class'
+            $("#box").append(ipt)
+
+        })
+        // but.click
+    </script>
+</body>
+</html>

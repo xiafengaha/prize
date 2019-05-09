@@ -273,5 +273,26 @@ $(function () {
         $('.lpl_list').removeClass('active').hide().eq(i - 1).show().addClass('active');
         // $('.lucky_title_img').
     }
+    getLocalData();
+    function getLocalData() { // 获取local数据
+        let localUser = localStorage.getItem('userData')
+        let gradeData = localStorage.getItem('gradeData')
+        let userArr = localUser.split(',')
+        let gradeArr = JSON.parse(gradeData)
+        for (let i = 0; i < gradeArr.length; i++) {
+            let sp = document.createElement('p')
+            let div = document.createElement('div')
+            div.className = 'lpl_list clearfix none'
+            sp.innerText = gradeArr[i]
+            console.log(sp, 'sp', gradeArr[i])
+            sp.className = 'lucky_prize_show none'
+            $('.lucky_prize_picture').append(sp)
+            $('.lucky_people_list').append(div)
+        }
+        console.log(userArr, gradeArr)
+    }
     tabPrize();
+
+
+
 })
