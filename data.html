@@ -23,7 +23,7 @@
         var textDom = document.getElementById('textarea')
         var but = document.getElementById('but')
         var textData = textDom.value
-        // but.onclick = butClick()
+        but.onclick = butClick()
         function butClick () {
             $("#textarea").val()
             let text = $("#textarea").val()
@@ -40,7 +40,11 @@
             // console.log($("#textarea").val(), localData)
             localStorage.setItem("userData",text)
             localStorage.setItem('gradeData', JSON.stringify(iptData))
-            alert('录入成功')
+            if (iptData.length === 0 && userData) {
+                window.open('https://xiafengaha.github.io/prize/index.html', '_self')
+            } else {
+                alert('请重新录入数据')
+            }
 
         }
         $("#but").click(function(){

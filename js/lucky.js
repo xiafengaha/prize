@@ -284,12 +284,10 @@ $(function () {
             let div = document.createElement('div')
             div.className = 'lpl_list clearfix none'
             sp.innerText = gradeArr[i]
-            console.log(sp, 'sp', gradeArr[i])
             sp.className = 'lucky_prize_show none'
             $('.lucky_prize_picture').append(sp)
             $('.lucky_people_list').append(div)
         }
-        console.log(userArr, gradeArr)
     }
     tabPrize();
 
