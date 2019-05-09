@@ -28,7 +28,6 @@
             $("#textarea").val()
             let text = $("#textarea").val()
             let ipt = document.getElementsByClassName('input-class')
-            console.log(ipt, 'ipt')
             let iptData = []
             for(let i = 0; i < ipt.length; i++) {
                 if (ipt[i].value) {
@@ -40,7 +39,7 @@
             // console.log($("#textarea").val(), localData)
             localStorage.setItem("userData",text)
             localStorage.setItem('gradeData', JSON.stringify(iptData))
-            if (iptData.length === 0 && text) {
+            if (iptData.length !== 0 && text) {
                 window.open('https://xiafengaha.github.io/prize/index.html', '_self')
             } else {
                 alert('请重新录入数据')
