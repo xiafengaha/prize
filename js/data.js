@@ -11,6 +11,9 @@
 //     )
 // }
     let localData = localStorage.getItem('userData')
+    if (!localData) {
+        window.open('https://xiafengaha.github.io/prize/data.html', '_self')
+    }
     let arr = localData.split(',')
     // console.log(arr, 'arr')
     for(let i = 0; i < arr.length; i++) {
