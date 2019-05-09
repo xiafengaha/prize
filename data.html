@@ -40,7 +40,7 @@
             // console.log($("#textarea").val(), localData)
             localStorage.setItem("userData",text)
             localStorage.setItem('gradeData', JSON.stringify(iptData))
-            if (iptData.length === 0 && userData) {
+            if (iptData.length === 0 && text) {
                 window.open('https://xiafengaha.github.io/prize/index.html', '_self')
             } else {
                 alert('请重新录入数据')
